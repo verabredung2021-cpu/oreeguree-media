@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>오리구리 미디어 · Oreeguree Media</title>
+<meta name="description" content="오리구리 미디어 — 경기도 고양시의 독립 게임 스튜디오. 모바일 게임과 미디어 콘텐츠를 만듭니다.">
+<meta property="og:title" content="오리구리 미디어 · Oreeguree Media">
+<meta property="og:description" content="독립 게임 스튜디오 · 모바일 게임과 미디어 콘텐츠">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --iron-deep:#0d0f12;
+  --iron:#14161a;
+  --plate:#1e2229;
+  --plate-hi:#2b3038;
+  --etch:#878d97;
+  --text:#dfe3e9;
+  --ember:#ff5a2e;
+  --brass:#c9a227;
+  --rule:rgba(255,255,255,.08);
+  --f-disp:'Oswald','Noto Sans KR',system-ui,sans-serif;
+  --f-data:'IBM Plex Mono',ui-monospace,monospace;
+  --f-body:'Noto Sans KR',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--iron-deep);color:var(--text);font-family:var(--f-body);
+  line-height:1.7;-webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(120% 70% at 50% -20%,rgba(255,90,46,.10),transparent 60%),
+    linear-gradient(180deg,var(--iron) 0%,var(--iron-deep) 46%);
+  background-repeat:no-repeat;
+}
+.wrap{width:min(760px,100% - 40px);margin-inline:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px;border-radius:2px}
+
+/* ---- top rail ---- */
+.rail{
+  position:sticky;top:0;z-index:10;
+  background:rgba(13,15,18,.82);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.rail-in{display:flex;align-items:center;justify-content:space-between;height:56px}
+.mark{
+  font-family:var(--f-disp);font-weight:600;font-size:14px;
+  letter-spacing:.22em;color:var(--text);text-transform:uppercase;
+}
+.mark span{color:var(--ember)}
+.lang{
+  font-family:var(--f-data);font-size:11px;letter-spacing:.12em;
+  color:var(--etch);background:none;border:1px solid var(--rule);
+  border-radius:2px;padding:5px 10px;cursor:pointer;transition:color .2s,border-color .2s;
+}
+.lang:hover{color:var(--text);border-color:var(--etch)}
+
+/* ---- hero ---- */
+.hero{padding:96px 0 84px}
+.eyebrow{
+  font-family:var(--f-data);font-size:11px;letter-spacing:.28em;
+  color:var(--etch);text-transform:uppercase;margin-bottom:22px;
+}
+.eyebrow::before{
+  content:'';display:inline-block;width:22px;height:1px;
+  background:var(--ember);vertical-align:middle;margin-right:12px;
+}
+.title{
+  font-family:var(--f-disp);font-weight:600;text-transform:uppercase;
+  font-size:clamp(38px,9vw,68px);line-height:.96;letter-spacing:.01em;
+}
+.title .l2{display:block;color:var(--etch);font-weight:300}
+.lede{
+  margin-top:26px;max-width:46ch;color:#aeb5c0;font-size:15.5px;
+}
+.cta{
+  display:inline-flex;align-items:center;gap:10px;margin-top:34px;
+  font-family:var(--f-data);font-size:12.5px;letter-spacing:.1em;
+  color:var(--text);text-decoration:none;
+  border:1px solid var(--rule);border-radius:2px;padding:13px 20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),transparent);
+  transition:border-color .2s,color .2s,transform .12s;
+}
+.cta:hover{border-color:var(--ember);color:#fff}
+.cta:active{transform:translateY(1px)}
+.cta::after{content:'→';color:var(--ember)}
+
+/* ---- section frame ---- */
+.sec{padding:0 0 84px}
+.sec-label{
+  font-family:var(--f-data);font-size:11px;letter-spacing:.24em;
+  color:var(--etch);text-transform:uppercase;
+  padding-bottom:14px;margin-bottom:30px;border-bottom:1px solid var(--rule);
+}
+
+/* ---- SIGNATURE: manufacturer's spec plate ---- */
+.plate{
+  position:relative;border-radius:3px;padding:38px 34px;
+  background:
+    repeating-linear-gradient(96deg,rgba(255,255,255,.014) 0 2px,transparent 2px 5px),
+    linear-gradient(158deg,var(--plate-hi) 0%,var(--plate) 38%,#171b21 100%);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.10) inset,
+    0 -1px 0 rgba(0,0,0,.5) inset,
+    0 18px 40px rgba(0,0,0,.5);
+  border:1px solid rgba(255,255,255,.06);
+}
+.rivet{
+  position:absolute;width:9px;height:9px;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%,#9aa2ad,#4a505a 58%,#22262c);
+  box-shadow:0 1px 1px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.35);
+}
+.rivet.tl{top:12px;left:12px} .rivet.tr{top:12px;right:12px}
+.rivet.bl{bottom:12px;left:12px} .rivet.br{bottom:12px;right:12px}
+
+.plate-head{
+  font-family:var(--f-disp);font-weight:500;text-transform:uppercase;
+  font-size:19px;letter-spacing:.2em;color:#eef1f5;
+  text-shadow:0 1px 0 rgba(255,255,255,.10),0 -1px 0 rgba(0,0,0,.65);
+}
+.plate-sub{
+  font-family:var(--f-data);font-size:11.5px;letter-spacing:.14em;
+  color:var(--brass);margin-top:6px;
+}
+.plate-rule{height:1px;background:linear-gradient(90deg,rgba(255,255,255,.14),transparent);margin:24px 0}
+
+.rows{display:grid;gap:0}
+.row{
+  display:grid;grid-template-columns:150px 1fr;gap:16px;
+  padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.055);
+}
+.row:last-child{border-bottom:0}
+.row dt{
+  font-family:var(--f-data);font-size:11px;letter-spacing:.14em;
+  color:var(--etch);text-transform:uppercase;padding-top:3px;
+}
+.row dd{
+  font-family:var(--f-data);font-size:14px;color:#e6eaf0;
+  text-shadow:0 -1px 0 rgba(0,0,0,.5);word-break:keep-all;
+}
+.row dd .ko{font-family:var(--f-body);font-size:14.5px}
+
+/* ---- contact ---- */
+.contact-mail{
+  font-family:var(--f-data);font-size:clamp(15px,3.6vw,21px);
+  color:var(--text);text-decoration:none;border-bottom:1px solid var(--ember);
+  padding-bottom:3px;transition:color .2s;
+}
+.contact-mail:hover{color:var(--ember)}
+.contact-note{margin-top:16px;color:var(--etch);font-size:13.5px}
+
+/* ---- footer ---- */
+footer{border-top:1px solid var(--rule);padding:26px 0 42px}
+.foot-in{
+  display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;
+  font-family:var(--f-data);font-size:11px;letter-spacing:.1em;color:#5f656e;
+}
+
+/* ---- load-in ---- */
+.rise{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
+.rise:nth-child(1){animation-delay:.05s}
+.rise:nth-child(2){animation-delay:.13s}
+.rise:nth-child(3){animation-delay:.21s}
+.rise:nth-child(4){animation-delay:.29s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .rise{animation:none;opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+@media (max-width:560px){
+  .hero{padding:64px 0 60px}
+  .plate{padding:32px 22px}
+  .row{grid-template-columns:1fr;gap:4px}
+  .row dt{padding-top:0}
+}
+</style>
+</head>
+<body>
+
+<header class="rail">
+  <div class="wrap rail-in">
+    <div class="mark">Oreeguree<span>.</span>Media</div>
+    <button class="lang" id="lang-btn" type="button" aria-label="Switch language">EN</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <p class="eyebrow rise" data-ko="현재 출시작" data-en="Current release">현재 출시작</p>
+    <h1 class="title rise">Last Breath<span class="l2">of Engines</span></h1>
+    <p class="lede rise"
+       data-ko="붕괴 직전의 네온 팩토리. 100종의 기체와 100인의 파일럿을 조합해 8분 단위의 작전을 살아남는 메카 서바이벌 액션."
+       data-en="A neon factory on the brink of collapse. Combine 100 mechs and 100 pilots to survive eight-minute operations in this mecha survival action game.">
+       붕괴 직전의 네온 팩토리. 100종의 기체와 100인의 파일럿을 조합해 8분 단위의 작전을 살아남는 메카 서바이벌 액션.
+    </p>
+    <a class="cta rise" href="https://play.google.com/store/apps/details?id=com.codex.ashencore"
+       target="_blank" rel="noopener"
+       data-ko="Google Play에서 보기" data-en="View on Google Play">Google Play에서 보기</a>
+  </section>
+
+  <section class="sec wrap">
+    <p class="sec-label" data-ko="스튜디오 정보" data-en="Studio record">스튜디오 정보</p>
+
+    <div class="plate">
+      <span class="rivet tl"></span><span class="rivet tr"></span>
+      <span class="rivet bl"></span><span class="rivet br"></span>
+
+      <div class="plate-head">Oreeguree Media</div>
+      <div class="plate-sub" data-ko="오리구리 미디어 · 독립 게임 스튜디오"
+           data-en="Independent game studio · Goyang, Republic of Korea">오리구리 미디어 · 독립 게임 스튜디오</div>
+
+      <div class="plate-rule"></div>
+
+      <dl class="rows">
+        <div class="row">
+          <dt data-ko="상호" data-en="Legal name">상호</dt>
+          <dd><span class="ko" data-ko="오리구리 미디어" data-en="Oreeguree Media">오리구리 미디어</span></dd>
+        </div>
+        <div class="row">
+          <dt data-ko="형태" data-en="Structure">형태</dt>
+          <dd><span class="ko" data-ko="개인사업자" data-en="Sole proprietorship">개인사업자</span></dd>
+        </div>
+        <div class="row">
+          <dt data-ko="대표" data-en="Representative">대표</dt>
+          <dd><span class="ko" data-ko="곽령현" data-en="Kwak Ryeong Hyun">곽령현</span></dd>
+        </div>
+        <div class="row">
+          <dt data-ko="사업자등록번호" data-en="Business reg. no.">사업자등록번호</dt>
+          <dd>558-06-02192</dd>
+        </div>
+        <div class="row">
+          <dt data-ko="통신판매업 신고" data-en="E-commerce reg. no.">통신판매업 신고</dt>
+          <dd>2026-고양덕양구-1794</dd>
+        </div>
+        <div class="row">
+          <dt data-ko="설립" data-en="Established">설립</dt>
+          <dd>2021</dd>
+        </div>
+        <div class="row">
+          <dt data-ko="사업 분야" data-en="Line of business">사업 분야</dt>
+          <dd><span class="ko" data-ko="모바일 게임 개발 · 미디어 콘텐츠 창작"
+                    data-en="Mobile game development · media content creation">모바일 게임 개발 · 미디어 콘텐츠 창작</span></dd>
+        </div>
+        <div class="row">
+          <dt data-ko="소재지" data-en="Address">소재지</dt>
+          <dd><span class="ko"
+              data-ko="경기도 고양시 덕양구 무원로 24, 402호"
+              data-en="402, 24 Muwon-ro, Deogyang-gu, Goyang-si, Gyeonggi-do 10523, Republic of Korea">경기도 고양시 덕양구 무원로 24, 402호</span></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <p class="sec-label" data-ko="문의" data-en="Contact">문의</p>
+    <a class="contact-mail" href="mailto:verabredung2021@gmail.com">verabredung2021@gmail.com</a>
+    <p class="contact-note"
+       data-ko="게임 관련 문의, 버그 제보, 제휴 제안 모두 이 주소로 받습니다."
+       data-en="Support requests, bug reports, and partnership enquiries all reach us here.">
+       게임 관련 문의, 버그 제보, 제휴 제안 모두 이 주소로 받습니다.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© 2026 OREEGUREE MEDIA</span>
+    <span data-ko="경기도 고양시" data-en="Goyang, Republic of Korea">경기도 고양시</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('lang-btn');
+  var lang = 'ko';
+  function apply(next){
+    lang = next;
+    document.documentElement.lang = next;
+    btn.textContent = next === 'ko' ? 'EN' : 'KO';
+    document.querySelectorAll('[data-ko]').forEach(function(el){
+      var v = el.getAttribute('data-' + next);
+      if (v) el.textContent = v;
+    });
+    document.title = next === 'ko'
+      ? '오리구리 미디어 · Oreeguree Media'
+      : 'Oreeguree Media · Independent game studio';
+  }
+  btn.addEventListener('click', function(){ apply(lang === 'ko' ? 'en' : 'ko'); });
+  if ((navigator.language || '').slice(0,2) !== 'ko') apply('en');
+})();
+</script>
+
+</body>
+</html>
